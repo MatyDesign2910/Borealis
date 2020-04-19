@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>
+    SPOC by Borealis
+  </title>
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+  <!--     Fonts and icons     -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+  <!-- CSS Files -->
+  <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="../assets/css/custom.css" rel="stylesheet" />
+  <link href="../assets/css/now-ui-dashboard.css?v=1.1.0" rel="stylesheet" />
+  <!-- CSS Just for demo purpose, don't include it in your project -->
+  <link href="../assets/demo/demo.css" rel="stylesheet" /> 
+  <script src="https://cdn.jsdelivr.net/npm/gijgo@1.9.10/js/gijgo.min.js" type="text/javascript"></script>
+  <link href="https://cdn.jsdelivr.net/npm/gijgo@1.9.10/css/gijgo.min.css" rel="stylesheet" type="text/css" />  
+</head>
+
+<body class="">
+  <div class="wrapper">
+    <div class="sidebar bg-menu" data-color="orange">
+      <!--
+        Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red | yellow"
+    -->
+      <div class="logo bg-white">
+        <a href="dashboard.html" class="simple-text logo-index">
+          <img src="../assets/img/logo.svg" class="" alt="SPOC">
+        </a>
+      </div>
+      <div class="sidebar-wrapper">
+        <ul class="nav">
+          <li>
+            <a href="./ordenes-compra.html">
+              <i class="now-ui-icons files_paper"></i>
+              <p>Órdenes de compra</p>
+            </a>
+          </li>
+          <li>
+            <a href="./clientes.html">
+              <i class="now-ui-icons clothes_tie-bow"></i>
+              <p>Clientes</p>
+            </a>
+          </li>
+          <li>
+            <a href="./productos.html">
+              <i class="now-ui-icons shopping_box"></i>
+              <p>Productos</p>
+            </a>
+          </li>
+          <li>
+            <a href="./contratos.html">
+              <i class="now-ui-icons files_single-copy-04"></i>
+              <p>Contratos</p>
+            </a>
+          </li>
+          <!-- Dropdown-->
+          <li id="dropdown">
+                <a data-toggle="collapse" href="#dropdown-lvl1">
+                    <i class="now-ui-icons ui-1_settings-gear-63"></i>
+                    Configuración <span class="caret"></span>
+                </a>
+                <!-- Dropdown level 1 -->
+                <div id="dropdown-lvl1" class="panel-collapse collapse pl-2 mt-0 bg-magenta">
+                    <div class="panel-body">
+                        <ul class="nav navbar-nav">
+                            <li><a href="usuarios.html" class="ml-0 mr-2 pl-4">Usuarios</a></li>
+                            <li><a href="empresas.html" class="ml-0 mr-2 pl-4">Empresas</a></li>
+                            <li><a href="roles.html" class="ml-0 mr-2 pl-4">Roles</a></li>
+                            <li><a href="origenes.html" class="ml-0 mr-2 pl-4">Orígenes Fuentes</a></li>
+                            <li><a href="c-reportes.html" class="ml-0 mr-2 pl-4">Config. Reportes</a></li>                            
+                        </ul>
+                    </div>
+                </div>
+          </li>
+          <li>
+            <a href="carga-listas.html">
+              <i class="now-ui-icons design_bullet-list-67"></i>
+              <p>Configuración de listas</p>
+            </a>
+          </li>
+          <li class="active">
+            <a href="reportes.html">
+              <i class="now-ui-icons education_paper"></i>
+              <p>Reportes</p>
+            </a>
+          </li>
+          <li>
+            <a href="./index.html">
+              <i class="now-ui-icons media-1_button-power"></i>
+              <p>Salir</p>
+            </a>
+          </li>          
+        </ul>
+      </div>
+    </div>
+    <div class="main-panel">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-transparent  navbar-absolute bg-primary fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-wrapper">
+            <div class="navbar-toggle">
+              <button type="button" class="navbar-toggler">
+                <span class="navbar-toggler-bar bar1"></span>
+                <span class="navbar-toggler-bar bar2"></span>
+                <span class="navbar-toggler-bar bar3"></span>
+              </button>
+            </div>
+            <a class="navbar-brand" href="#pablo"><h3>REPORTES</h3></a>
+          </div>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-bar navbar-kebab"></span>
+            <span class="navbar-toggler-bar navbar-kebab"></span>
+            <span class="navbar-toggler-bar navbar-kebab"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navigation">
+            <!-- <form>
+              <div class="input-group no-border">
+                <input type="text" value="" class="form-control" placeholder="Buscar...">
+                <div class="input-group-append">
+                  <div class="input-group-text">
+                    <i class="now-ui-icons ui-1_zoom-bold"></i>
+                  </div>
+                </div>
+              </div>
+            </form> -->
+            <ul class="navbar-nav">
+              <li class="nav-item" title="Editar perfil">
+                <a class="nav-link" href="datos.html">
+                  <i class="now-ui-icons users_single-02"></i> Bienvenido <b>Matías Gómez</b>
+                  <p>
+                    <span class="d-lg-none d-md-block">Perfil</span>
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item" title="Ver empresas">
+                <a class="nav-link" data-toggle="modal" data-target="#myModal">
+                  <i class="now-ui-icons location_world"></i><b>Nombre</b> de Empresa</b>
+                  <p>
+                    <span class="d-lg-none d-md-block">Perfil</span>
+                  </p>
+                </a>
+              </li>
+              <!--<li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="now-ui-icons location_world"></i> Nombre de Empresa
+                  <p>
+                    <span class="d-lg-none d-md-block">Some Actions</span>
+                  </p>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="#">Acciones</a>
+                  <a class="dropdown-item" href="#">Cambiar de perfil</a>
+                  <a class="dropdown-item" href="#">Cambiar empresa</a>
+                  <a class="dropdown-item" href="#"><b>
+                    <i class="now-ui-icons media-1_button-power"></i> Salir</b>
+                  </a>
+                </div>
+              </li>   -->            
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- End Navbar -->
+      <div class="panel-header panel-header-sm">
+      </div>
+      <div class="content">     
+        <!--Tabla-->  
+        <div class="content">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-header">
+                  <h4 class="card-title w-50 float-left">Listado</h4>
+                  <!--<div class="text-right">
+                    <a target="_blank" href="#" class="btn btn-round btn-primary">Generar Reporte</a>
+                  </div> -->
+                  <div class="row float-left w-100">
+                    <div class="col-md-4">
+                      <div class="form-group position-relative">
+                        <label>Fecha inicio de Reporte</label>
+                        <input type="date" id="datepicker" class="form-control pl-5" placeholder="Home Address">
+                        <div class="input-group-addon position-absolute date-icon">
+                            <i class="now-ui-icons ui-1_calendar-60"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="form-group">
+                        <label>Fecha termino de Reporte</label>
+                        <input type="date" id="datepicker" class="form-control pl-5" placeholder="Home Address">
+                        <div class="input-group-addon position-absolute date-icon">
+                            <i class="now-ui-icons ui-1_calendar-60"></i>
+                        </div>
+                      </div>
+                    </div>                                         
+                  </div>                
+                </div>
+                <div class="card-body">
+                  <div class="table-responsive scroll-no">
+                    <iframe src="tablas-8.html" class="w-100 iframe-table" height="450px" style="border: none;margin-bottom: 0px;"></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="row">
+          <div class="col-md-6">
+            <div class="card  card-tasks">
+              <div class="card-header ">
+                <h5 class="card-category">Backend development</h5>
+                <h4 class="card-title">Tasks</h4>
+              </div>
+              <div class="card-body ">
+                <div class="table-full-width table-responsive">
+                  <table class="table">
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div class="form-check">
+                            <label class="form-check-label">
+                              <input class="form-check-input" type="checkbox" checked>
+                              <span class="form-check-sign"></span>
+                            </label>
+                          </div>
+                        </td>
+
+                        <td class="text-left">Sign contract for "What are conference organizers afraid of?"</td>
+                        <td class="td-actions text-right">
+                          <button type="button" rel="tooltip" title="" class="btn btn-info btn-round btn-icon btn-icon-mini btn-neutral" data-original-title="Edit Task">
+                            <i class="now-ui-icons ui-2_settings-90"></i>
+                          </button>
+                          <button type="button" rel="tooltip" title="" class="btn btn-danger btn-round btn-icon btn-icon-mini btn-neutral" data-original-title="Remove">
+                            <i class="now-ui-icons ui-1_simple-remove"></i>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="form-check">
+                            <label class="form-check-label">
+                              <input class="form-check-input" type="checkbox">
+                              <span class="form-check-sign"></span>
+                            </label>
+                          </div>
+                        </td>
+
+                        <td class="text-left">Lines From Great Russian Literature? Or E-mails From My Boss?</td>
+                        <td class="td-actions text-right">
+                          <button type="button" rel="tooltip" title="" class="btn btn-info btn-round btn-icon btn-icon-mini btn-neutral" data-original-title="Edit Task">
+                            <i class="now-ui-icons ui-2_settings-90"></i>
+                          </button>
+                          <button type="button" rel="tooltip" title="" class="btn btn-danger btn-round btn-icon btn-icon-mini btn-neutral" data-original-title="Remove">
+                            <i class="now-ui-icons ui-1_simple-remove"></i>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="form-check">
+                            <label class="form-check-label">
+                              <input class="form-check-input" type="checkbox" checked>
+                              <span class="form-check-sign"></span>
+                            </label>
+                          </div>
+                        </td>
+                        
+                        <td class="text-left">Flooded: One year later, assessing what was lost and what was found when a ravaging rain swept through metro Detroit
+                        </td>
+                        <td class="td-actions text-right">
+                          <button type="button" rel="tooltip" title="" class="btn btn-info btn-round btn-icon btn-icon-mini btn-neutral" data-original-title="Edit Task">
+                            <i class="now-ui-icons ui-2_settings-90"></i>
+                          </button>
+                          <button type="button" rel="tooltip" title="" class="btn btn-danger btn-round btn-icon btn-icon-mini btn-neutral" data-original-title="Remove">
+                            <i class="now-ui-icons ui-1_simple-remove"></i>
+                          </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="card-footer ">
+                <hr>
+                <div class="stats">
+                  <i class="now-ui-icons loader_refresh spin"></i> Updated 3 minutes ago
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="card-category">All Persons List</h5>
+                <h4 class="card-title"> Employees Stats</h4>
+              </div>
+              <div class="card-body">
+                <div class="table-responsive">
+                  <table class="table">
+                    <thead class=" text-primary">
+                      <th>
+                        Name
+                      </th>
+                      <th>
+                        Country
+                      </th>
+                      <th>
+                        City
+                      </th>
+                      <th class="text-right">
+                        Salary
+                      </th>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          Dakota Rice
+                        </td>
+                        <td>
+                          Niger
+                        </td>
+                        <td>
+                          Oud-Turnhout
+                        </td>
+                        <td class="text-right">
+                          $36,738
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Minerva Hooper
+                        </td>
+                        <td>
+                          Curaçao
+                        </td>
+                        <td>
+                          Sinaai-Waas
+                        </td>
+                        <td class="text-right">
+                          $23,789
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Sage Rodriguez
+                        </td>
+                        <td>
+                          Netherlands
+                        </td>
+                        <td>
+                          Baileux
+                        </td>
+                        <td class="text-right">
+                          $56,142
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Doris Greene
+                        </td>
+                        <td>
+                          Malawi
+                        </td>
+                        <td>
+                          Feldkirchen in Kärnten
+                        </td>
+                        <td class="text-right">
+                          $63,542
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Mason Porter
+                        </td>
+                        <td>
+                          Chile
+                        </td>
+                        <td>
+                          Gloucester
+                        </td>
+                        <td class="text-right">
+                          $78,615
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> -->
+      </div>
+      <footer class="footer">
+        <div class="container-fluid ml-2">
+            <nav>
+              <ul>
+                <li>
+                  <img src="../assets/img/logo.svg" class="float-left" width="80px"> © copyright 2018 SPOC
+                </li>
+              </ul>
+            </nav>
+
+          <div class="copyright mr-4">
+            &copy;
+            <script>
+              document.write(new Date().getFullYear())
+            </script>, Powered by 
+            <a href="https://www.borealis.cl" target="_blank"><img src="../assets/img/logo-borealis.png" width="100px"></a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+  <!--   Core JS Files   -->
+  <script src="../assets/js/core/jquery.min.js"></script>
+  <script src="../assets/js/core/popper.min.js"></script>
+  <script src="../assets/js/core/bootstrap.min.js"></script>
+  <script src="../assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+  <!--  Google Maps Plugin    -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+  <!-- Chart JS -->
+  <script src="../assets/js/plugins/chartjs.min.js"></script>
+  <!--  Notifications Plugin    -->
+  <script src="../assets/js/plugins/bootstrap-notify.js"></script>
+  <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
+  <script src="../assets/js/now-ui-dashboard.min.js?v=1.1.0" type="text/javascript"></script>
+  <!-- Now Ui Dashboard DEMO methods, don't include it in your project! -->
+  <script src="../assets/demo/demo.js"></script>
+  <script>
+    $(document).ready(function() {
+      // Javascript method's body can be found in assets/js/demos.js
+      demo.initDashboardPageCharts();
+
+    });
+  </script>
+  <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script>
+    // jQuery
+    $(document).ready(function(){ 
+      
+        $('#alternar-respuesta-ej5').toggle( 
+      
+            // Primer click
+            function(e){ 
+                $('#respuesta-ej5').slideDown();
+                $(this).html('Filtros órdenes de compra <i class="now-ui-icons arrows-1_minimal-up float-right mt-2 mr-2"></i>');
+                e.preventDefault();
+            }, // Separamos las dos funciones con una coma
+          
+            // Segundo click
+            function(e){ 
+                $('#respuesta-ej5').slideUp();
+                $(this).html('Filtros órdenes de compra <i class="now-ui-icons arrows-1_minimal-down float-right mt-2 mr-2"></i>');
+                e.preventDefault();
+            }
+      
+        );
+      
+    });
+  </script>
+  <script>
+    $('#datepicker').datepicker({
+      uiLibrary: 'bootstrap4'
+    });
+  </script> 
+  <!-- The Modal -->
+  <div class="modal fade" id="myModal" style="z-index: 999999;">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Cambiar perfil de empresa</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body">
+          <div class="col-md-12">
+            <div class="form-group">
+              <label>Seleccione una empresa</label>
+              <select class="custom-select form-control" id="inputGroupSelect01" placeholder="Nombre de cliente">
+                <option selected>Todas</option>
+                <option value="1">Borealis</option>
+                <option value="2">SPOC</option>
+                <option value="3">PGM</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal footer -->       
+        <div class="modal-footer">
+          <div class="text-right">
+            <a target="_blank" href="#" class="btn btn-round btn-primary">Aceptar</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>  
+</body>
+
+</html>

@@ -1,0 +1,188 @@
+body {
+  height: auto;
+  overflow: auto;
+  font-size: .93rem;
+}
+/*Background de menu*/
+.bg-menu {
+	background-color:#001c67 !important;
+    background-size: cover !important;
+}
+.sidebar[data-color="orange"]:after, .off-canvas-sidebar[data-color="orange"]:after {
+    background: unset !important;
+}
+.logo-index {
+	width: 100%;
+	margin: auto;
+}
+.sidebar[data-color="orange"] .nav li.active>a, .off-canvas-sidebar[data-color="orange"] .nav li.active>a {
+    color: #5e76ba !important;
+}
+.sidebar[data-color="orange"] .nav li.active>a i, .off-canvas-sidebar[data-color="orange"] .nav li.active>a i {
+    color: #5e76ba !important;
+}
+/*Gráfico*/
+.panel-header {
+    height: 260px;
+    padding-top: 80px;
+    padding-bottom: 45px;
+    background: #141E30;
+    background: -webkit-gradient(linear, left top, right top, from(#0c2646), color-stop(60%, #204065), to(#2a5788));
+    background: linear-gradient(to right, #001c67 0%, #892727 100%) !important;
+    position: relative;
+    overflow: hidden;
+}
+/*Sección seleccionada*/
+.active {
+	font-weight: bold;
+}
+#alternar-respuesta-ej5 {
+	cursor: pointer;
+}
+/*Sin scroll*/
+.scroll-no {
+	overflow: hidden !important;
+}
+/*Bordes redondeados de input*/
+div.dataTables_wrapper div.dataTables_filter input {
+    margin-left: 0.5em;
+    display: inline-block;
+    width: auto;
+    border-radius: 30px;
+}
+select.form-control-sm:not([size]):not([multiple]), .input-group-sm > select.form-control:not([size]):not([multiple]), .input-group-sm > .input-group-prepend > select.input-group-text:not([size]):not([multiple]), .input-group-sm > .input-group-append > select.input-group-text:not([size]):not([multiple]), .input-group-sm > .input-group-prepend > select.btn:not([size]):not([multiple]), .input-group-sm > .input-group-append > select.btn:not([size]):not([multiple]) {
+    height: calc(1.8125rem + 2px);
+    border-radius: 30px;
+}
+.date-icon {
+	left: 15px;
+    top: 35px;
+}
+.main-panel>.content {
+    padding: 0 30px 30px;
+    min-height: auto !important;
+    margin-top: -30px;
+}
+.btn-primary {
+    background-color: #5779bc !important;
+    color: #FFFFFF;
+}
+.fondo-img {
+	background-image: url(../img/header.jpg);
+	background-size: cover;
+}
+.bg-white-transparent {
+	background-color: rgba(256, 256, 256, 0.6);
+}
+.login {
+	width: 400px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 10%;
+}
+.label-login {
+	color:#fff;
+	font-weight:500;
+}
+.footer-login {
+	width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom:0;
+}
+.border-input {
+	border: 1.5px solid #E3E3E3 !important;
+}
+/*Azul text-primary*/
+.text-primary {
+    color: #5779bc !important;
+}
+/*Propiedades de texto en datatable*/
+.table>thead>tr>th {
+    border-bottom-width: 1px;
+    font-size: 0.99em !important;
+    font-weight: 400 !important;
+    border: 0;
+    color: #5779bc !important;
+}
+.page-item.active .page-link {
+    z-index: 1;
+    color: #fff;
+    background-color: #5779bc !important;
+    border-color: #5779bc !important;
+}
+.table td, .table th {
+    padding: .75rem !important;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+    font-size: .93em !important;
+}
+@media screen and (min-width: 992px) {
+  .iframe-table {
+  	overflow:hidden;
+  	}
+  .login {
+  	width:600px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .iframe-table {
+  	overflow:auto;
+  	}
+  .login {
+  	width:100%;
+  }
+}
+.pointer {
+	cursor: pointer !important;
+}
+/*Botones de opciones*/
+a.btn2 {
+    padding: 8px 0 !important;
+    font-size: 13px;
+    width: 35px;
+    height: 35px;
+    display: block;
+    float: left;
+    text-align: center;
+    margin-left: 3px;
+    background: transparent;
+    border: 1px solid #5779bc;
+    color: #5779bc;
+    border-radius: 22px;
+    padding: 8px 12px;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+a.btn2:hover {
+    padding: 6px 0 !important;
+    font-size: 13px;
+    width: 35px;
+    height: 35px;
+    display: block;
+    float: left;
+    text-align: center;
+    margin-left: 3px;
+    background: transparent;
+    border: 1px solid #5779bc;
+    color: #fff;
+    background-color:#5779bc; 
+    border-radius: 22px;
+    padding: 8px 12px;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+.caret {
+    margin-top: 5px;
+}
+.bg-magenta {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.sidebar .nav li > a + div .nav li > a, .off-canvas-sidebar .nav li > a + div .nav li > a {
+    margin-top: 7px;
+    font-weight: normal;
+}
